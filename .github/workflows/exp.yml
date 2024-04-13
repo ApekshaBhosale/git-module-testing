@@ -1,18 +1,21 @@
-name: HelloWorld
+name: RunHelloWorldDynamic
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
   print_hello_world:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        repeat: [1, 2, 3, 4, 5] # Define how many times you want HelloWorld to run
+    inputs:
+      repeat:
+        description: 'Number of times to print "Hello, world!"'
+        required: true
 
     steps:
     - name: Print Hello World
-      run: echo "Hello, world! - ${{ matrix.repeat }}"
+      run: |
+        for ((i=1; i<=$REPEAT; i++)); do
+          echo "Hello, world!"
+        done
+      shell: bash
