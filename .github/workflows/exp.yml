@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        instance: [1, 2, 3, 4, 5]
+        repeat: [1, 2, 3, 4, 5]
 
     steps:
     - name: Print Hello World
