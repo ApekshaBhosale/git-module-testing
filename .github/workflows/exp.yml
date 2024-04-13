@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Print Hello World
       run: |
-        for ((i=1; i<=$REPEAT; i++)); do
+        for ((i=1; i<=${{ github.event.inputs.repeat }}; i++)); do
           echo "Hello, world!"
         done
       shell: bash
