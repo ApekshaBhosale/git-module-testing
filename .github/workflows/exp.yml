@@ -9,6 +9,10 @@ jobs:
   print_hello_world:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        repeat: [1, 2, 3, 4, 5] # Define how many times you want HelloWorld to run
+
     steps:
     - name: Print Hello World
-      run: echo "Hello, world!"
+      run: echo "Hello, world! - ${{ matrix.repeat }}"
