@@ -11,6 +11,7 @@ jobs:
       repeat:
         description: 'Number of times to print "Hello, world!"'
         required: true
+        default: 1
 
     steps:
     - name: Print Hello World
