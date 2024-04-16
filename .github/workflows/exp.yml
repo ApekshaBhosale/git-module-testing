@@ -18,7 +18,18 @@ jobs:
         run: npm install
 
       - name: Run Cypress Tests
+        id: cypress
         uses: cypress-io/github-action@v6
         with:
-          spec: 'cypress/integration/sample.spec.js'
-          retries: 3 # Run the spec file 5 times
+          browser: chrome
+          headless: true
+          spec: cypress/integration/sample.spec.js
+          record: false
+          parallel: false
+          retries: 2
+
+      - name: Run Cypress Tests Additional Times
+        run: |
+          for run in {1..4}; do
+            ${{ steps.cypress.outputs.cmd }}
+          done
