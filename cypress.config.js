@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: "http://localhost:3000", // Change this to match your application's URL
+  baseUrl: "http://localhost:8080", // Change this to match your application's URL
   integrationFolder: "cypress/integration", // Location of your Cypress test files
   testFiles: "**/*.spec.js", // Pattern to match test files
   video: false, // Disable video recording for now
