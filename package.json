@@ -1,17 +1,13 @@
 {
-  "name": "cypress-test-project",
+  "name": "cypress-tests",
   "version": "1.0.0",
-  "description": "A dummy project for running Cypress tests",
-  "main": "index.js",
+  "description": "Basic Cypress tests",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
     "cy:run": "cypress run --headless --browser chrome"
   },
-  "keywords": [],
-  "author": "Your Name",
-  "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.6.0"
+    "cypress": "^9.5.1"
   }
 }
