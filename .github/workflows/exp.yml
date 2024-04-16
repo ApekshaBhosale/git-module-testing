@@ -23,7 +23,7 @@ jobs:
         with:
           browser: chrome
           headless: true
-          spec: cypress/integration/sample.spec.js
+          spec: cypress/integration/your_spec_file.spec.js
           record: false
           parallel: false
           retries: 2
