@@ -31,5 +31,5 @@ jobs:
       - name: Run Cypress Tests Additional Times
         run: |
           for run in {1..4}; do
-            bash -c "$CYPRESS_CACHE_FOLDER/Cypress/Cypress\ ${{ steps.cypress.outputs.version }}/cypress run --browser chrome --headless --spec 'cypress/integration/sample.spec.js'"
+            npx cypress run --browser chrome --headless --spec 'cypress/integration/sample.spec.js'
           done
