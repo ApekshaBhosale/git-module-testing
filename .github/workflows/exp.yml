@@ -1,26 +1,18 @@
-name: RunHelloWorldDynamic
+name: Cypress Tests
 
 on:
   workflow_dispatch:
-    inputs:
-      repeat:
-        description: 'Number of times to print "Hello, world!"'
-        required: true
-        default: 1
 
 jobs:
-  print_hello_world:
+  cypress-run:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        job: [0,1,2]
-
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Run Cypress tests
-      run: npm run cy:run 
+      - name: Run Cypress Tests
+        run: npm test

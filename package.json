@@ -1,13 +1,11 @@
 {
   "name": "cypress-tests",
   "version": "1.0.0",
-  "description": "Basic Cypress tests",
+  "description": "Cypress tests for Google homepage",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run --headless --browser chrome"
+    "test": "cypress run"
   },
   "devDependencies": {
-    "cypress": "^9.5.1"
+    "cypress": "^9.7.0"
   }
 }

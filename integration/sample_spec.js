@@ -1,5 +1,6 @@
-describe('My First Test', function() {
-  it('Visits the Kitchen Sink', function() {
-    cy.visit('https://google.com')
+describe('Google', () => {
+  it('should open Google homepage', () => {
+    cy.visit('https://www.google.com')
+    cy.title().should('include', 'Google')
   })
 });
