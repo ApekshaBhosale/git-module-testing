@@ -3,7 +3,7 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -19,3 +19,6 @@ jobs:
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
+        with:
+          spec: 'cypress/integration/sample.spec.js'
+          retries: 3 # Run the spec file 5 times
