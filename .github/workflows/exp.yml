@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         job: [0,1,2]
-        repeat: [1, 2, 3, 4, 5]
 
     steps:
     - uses: actions/checkout@v2
